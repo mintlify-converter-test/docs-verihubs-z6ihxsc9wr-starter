@@ -1,0 +1,156 @@
+---
+title: "SMS OTP Service"
+description: "Send One-Time Passwords globally with a comprehensive API."
+---
+SMS OTP service will allow you to send a One-Time Password within a single message to all mobile phones globally. Verihubs comprehensive API and super network of direct operators make it quick, easy, and secure.
+
+# 🎈SET YOUR-OWN SENDER ID
+
+_What is Sender ID?_ Sender ID is the name or number that identifies the sender of an SMS message that you see at the top of your phone message application. Sender ID is simply whom you get the message from.
+
+[**Want to use your own Sender ID to test our service? Click here**](https://docs.google.com/forms/d/1FyU3cDoTiFX98WTj-7qsHNZgfrueyWUTsRBGop1lb3E/)
+
+Sender ID can be used for both SMS OTP and [SMS Announcement](/docs/sms-announcement)
+ service so you only need to submit the form once. Registration to operators usually takes about 14 working days to be fully ready to use. Please make sure to fill out the form correctly.
+
+![2616](https://files.readme.io/c8f489e-Picture2.png "Picture2.png")
+
+Sender ID example
+
+# 🎈DEMO
+
+Access [Verihubs Dashboard](https://app.verihubs.com)
+, and click on DEMO on the sidebar menu. You can quickly try to send an SMS containing OTP just a click away.
+
+![1881](https://files.readme.io/7b1386c-SMSOTPDemo.jpg "SMSOTPDemo.jpg")
+
+Demo Page
+
+To try DEMO you can follow this steps :
+
+1.  Every DEMO will be given a quota. The quota will be shown on the upper left of your DEMO page.
+2.  Select which Application Name you want to try this DEMO on. [Make sure you have created one, tho](/docs/applications)
+    .
+3.  Input the destination phone number you want to try DEMO
+4.  Select how long you want your OTP will be. The usual length is 4 to 6 digits number, but you can flexibly change the setting.
+5.  Each SMS containing OTP will have an expiry time. Input the expiry time (in seconds) for your SMS OTP.  
+    When you have received the SMS, input the OTP within the expiry time or your OTP will be considered unverified.
+6.  Here is where you compose your SMS. Make sure you add the variable $OTP on it to give place for the auto-generated OTP.  
+    _Example_ : **Your OTP code is $OTP. Never give the OTP code to anyone.**  
+    _Preview_ : **Your OTP code is 1234. Never give the OTP code to anyone.**  
+    The maximum character for SMS DEMO is 480 characters or 3 SMS segments.
+7.  Click on "**Make Demo OTP**" button to send the SMS OTP to the inputted destination number.  
+    _After you make a demo OTP you will receive an SMS containing the auto-generated OTP. You can input the OTP to the fields highlighted to get verification._
+8.  Input the OTP you received on the fields.
+9.  Click on "**Verify Now**" to verify your OTP.
+
+# 🎈SUMMARY
+
+This menu serves you with statistical data in numbers and graphs. You can see these statistics in every service.
+
+![1881](https://files.readme.io/e4e8a4e-SMSOTPSummary.jpg "SMSOTPSummary.jpg")
+
+SMS OTP Summary
+
+**Status and Description**
+
+| Status Code | Status | Description |
+| --- | --- | --- |
+| 0   | Requested | SMS OTP has been requested. |
+| 1   | Delivered | SMS OTP has been delivered to the destination number. This status will be charged. |
+| 2   | Verified | SMS OTP has been verified. This status will be charged. |
+| 3   | Unverified | SMS OTP has not been verified due to the time limit being exceeded. This status will be charged. |
+| 4   | Failed | The operator cannot send SMS OTP to the destination number |
+| 5   | Request Error | Verihubs cannot reach the Operator |
+| 6   | Rejected | Too Many Request (429) |
+| 7   | Undelivered | SMS OTP has not been delivered to the destination number (response received from Operator). This status will be charged. |
+| 8   | No Delivery Report | No Delivery Report received from Operator after a certain period. This status will be charged. |
+| 9   | Blocked | Verihubs's system has blocked the destination number |
+
+# 🎈TRANSACTION DETAILS
+
+This menu shows every detail of your transaction in the table. There are a few features that you can use below.
+
+![](https://files.readme.io/ca6d2c1-image.png)
+
+*   **Filter**: you can view the data based on the selected filter.
+    *   Send Date: range of dates which data will be shown in table details.
+    *   Application Name: name of the Application ID.
+    *   Operator: Indonesia mobile operators which can be picked to show in the table details.
+    *   Status: status of the transaction.
+    *   Mode: mode used for the transaction.
+*   **Export**: you can also export the data in a spreadsheet (.xlsx or .csv).
+*   **Table Details**:
+    *   SMS OTP ID: ID of the transactions.
+    *   Application Name: Name of the Application ID.
+    *   Phone Number: destination phone number.
+    *   Operator: mobile operator which use in transaction.
+    *   Sender ID: Sender ID used in the transactions.
+    *   Attempt: explain how many attempts the phone number has requested the OTP into our system.
+    *   Segment: Total segment use in the transactions. See more explanation of segment [here](/docs/sms-segment-count-explanation)
+        .
+    *   Date Sent: date which the transaction are requested to Verihubs's system.
+    *   Status: status of the specific transactions.
+    *   Charge Status: explained which transaction will be charge by Verihubs.
+    *   Mode: mode of the transactions.
+
+# 🎈BLOCKED NUMBERS
+
+This menu is for you who are often get disturbed by spam and fraud. Submit the number that is suspected of spam or fraud and fill in the description. Click on Submit Blocked Numbers to apply the service to the phone numbers.
+
+> ## ❗️Warning!
+> 
+> When you input specific phone number into the blocked numbers system, Verihubs system will automatically blocked the request from the number from SMS Announcement or SMS OTP service.
+
+![SMS Blocked Numbers](https://files.readme.io/38d72a6-image.png)
+
+SMS Blocked Numbers
+
+# 🎈SMS OTP Setting
+
+![SMS OTP Setting menu](https://files.readme.io/be077b2-image.png)
+
+SMS OTP Setting menu
+
+You can manage the setting for your SMS OTP service, such as:
+
+*   Application Name: choose you Application Name that you want the settings to be created.
+*   Expired Time (in seconds): time needed for the OTP to be verified.
+*   SMS OTP Length: length of the OTP that you want ranges from 4 to 10.
+*   Template Body: Composing your own template for your SMS containing $OTP.
+*   Spam Check
+    *   Rate limit (in seconds): Requests exceeding the limit within the specified period will result in an error code 429 and a status of 6 (Rejected). These requests will not be charged.
+    *   You need to enable the spam check button before you input the rate limit
+
+![](https://files.readme.io/f2f63a8-image.png)
+
+*   Anomaly Detection Algorithm Setting
+    *   Algorithm anomalies: All incoming request logs will be processed according to the Verihubs algorithm logic. If an anomaly is detected, the related request will be rejected and not forwarded to the operator. The incoming request will receive a status of 6 (rejected).
+    *   You need to enable the spam check button before choosing the Algorithm Anomalies.
+
+![](https://files.readme.io/1ce0c2d-image.png)
+
+# 🎈Anomaly Report
+
+Anomaly Report is a feature to help users get a list of fraud numbers that carry out suspicious activity.
+
+> ## 🚧Important!
+> 
+> You need to activate the feature on SMS OTP Setting (Spam Check part) before you can see the report on this dashboard.
+
+![](https://files.readme.io/92c2bed-image.png)
+
+Feature include:
+
+*   Filter
+    *   Send Date: the date on which the log details are needed (range 1 month).
+    *   App-Name: specific application name (& app-id) of the report needed.
+    *   Select Service: for now, the client can only use OTP as the service.
+    *   Select Feature: the client MUST choose the feature (either spam check or Fraud Detection Algorithm).
+*   Table Details
+    *   Date: Date of the transactions.
+    *   App-ID: Application ID used on the transactions.
+    *   SMS Type: Type of the Service.
+    *   App-Name: The name of the Application ID used on the transactions.
+    *   Phone Number: The phone number which hit the service.
+    *   Try Count: attempt of phone number.
