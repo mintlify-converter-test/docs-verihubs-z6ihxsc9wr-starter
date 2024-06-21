@@ -1,0 +1,100 @@
+---
+title: "Create Message Template"
+description: "Instructions to create a Message Template on the Verihubs Dashboard"
+---
+In order to initiate a conversation with the end-user, you must use a Message Template. Message Templates must be approved by WhatsApp and can be submitted via [Manage WhatsApp - Create Template](https://app.verihubs.com/cloud/wa/template)
+ on the Verihubs Dashboard.
+
+![Manage WhatsApp - Create Template](https://files.readme.io/4399905-image.png)
+
+Manage WhatsApp - Create Template
+
+# Create Message Template
+
+You can only create a Message Template if you have an active WhatsApp Business Channel / Profile that has been assigned to any of your Application ID. Follow the steps below:
+
+1.  Head to [Manage WhatsApp - Create Template](https://app.verihubs.com/cloud/wa/template)
+     on the sidebar.
+2.  Here are some guides in filling the fields within the [Manage WhatsApp - Create Template](https://app.verihubs.com/cloud/wa/template)
+    :
+
+![](https://files.readme.io/e9bca59-image.png)
+
+*   **WABA ID**: Select your WhatsApp Business Account ID (WABA ID)
+*   **Category**: Select the Category of your Template Content. You can refer to this documentation [WhatsApp New Template Guidelines](https://developers.facebook.com/docs/whatsapp/updates-to-pricing/new-template-guidelines)
+    *   **Utility**: Template will relate to a specific, agreed-upon transaction and accomplish one of the following: Confirm, suspend, or change a transaction or subscription.
+    *   **Authentication**: Template that will be used to enable businesses to authenticate users with one-time passcodes (usually 4-8 digit alphanumeric codes), potentially at multiple steps in the login process (e.g., account verification, account recovery, integrity challenges).
+    *   **Marketing**: Template that doesn't fall into Utility or Authentication category.
+
+Do note that as per 1 June 2023, each template category will have their own conversation window and have different pricing.
+
+*   **Language**: Select which language your message content will be delivered in
+*   **Message Template Name**: Enter name of the template. Only lowercase letters, numbers, and underscores are allowed.
+
+### Add your content:
+
+The Message Template consists of 4 parts:
+
+![](https://files.readme.io/4ef619c-image.png)
+
+*   **Header**: You can put text, image, or document here.
+    *   **Image & Document**: Fill with Google Drive public URL with this format: [https://drive.google.com/file/d/FILEID/view](https://drive.google.com/file/d/FILEID/view)
+          
+        Example: [https://drive.google.com/file/d/1Rk0CUGXG4kEi6EbcdK2yWsJfNZhxTNqm/view](https://drive.google.com/file/d/1Rk0CUGXG4kEi6EbcdK2yWsJfNZhxTNqm/view)
+        
+    *   **Text**: Add a title of your message
+
+![](https://files.readme.io/b1e5e99-image.png)
+
+*   **Message**: Fill it with the content of the message. It supports up to 1024 characters and 15 variables. You can also insert variables into the message so that it can be filled with values later on
+
+![1417](https://files.readme.io/b3c8eae-button_-_1.png "button - 1.png")
+
+button
+
+*   **Buttons**: Add a **Call to Action** or **Quick Reply** button to let your customers quickly respond to your message or take an action:
+    *   **Call to Action**: Create up to 2 buttons that let your customers take action. The options include **Call Phone Number** and **Visit Website**. This lets you add a phone number of website URL to your message. If you choose Visit Website, you can choose from a **Static** (fixed) website URL or a **Dynamic** website URL , which creates a personalized link for the customer to view their specific information on your website by adding a variable at the end of the link.
+    *   **Quick Reply**: Create up to 3 buttons that let your customers respond to your message.
+
+![](https://files.readme.io/1763150-image.png)
+
+*   **Footer**: Add a short line at the bottom of your message.
+
+3.  After you fill out the form, double-check all the information and, once you're ready you can click the submit request button. Keep in mind that once submitted for approval.
+
+## Template List
+
+You can track your template application status in the template list. There are 4 statuses for templates:
+
+| Status | Description |
+| --- | --- |
+| New/Pending | Template has been filed to Whatsapp and in review |
+| Rejected | Template is rejected by Whatsapp |
+| Approved | Template is ready to be used |
+
+## Setting
+
+After your template has been approved by Facebook, you can use the template by setting it up in WhatsApp OTP Summary or WhatsApp Message Summary in Setting.
+
+![1432](https://files.readme.io/5bf9c8a-setting-templateOTP.png "setting-templateOTP.png")
+
+template setting
+
+For WhatsApp OTP Template, you must choose and input the details below:
+
+*   OTP length
+*   Template name
+*   OTP location
+*   Input Expiry time (seconds)
+
+You can see it in the example and then click the **Save** button.
+
+When submitting your Template Message, you should keep the following things in mind:
+
+*   For OTP usage, Your template should include at least one parameter “{{x}}”
+*   Your template should not contain any spelling mistakes
+*   Your template should be formatted correctly & including parameters
+*   Your template should have a clear title name, for example instead of using a name like "template\_014," use "bus\_ticket\_details"
+*   Your template cannot be edited once it has been submitted
+*   Your template cannot contain any shortened URLs (like bit.ly)
+*   Your 'body' section should be within the 1024 character limit
