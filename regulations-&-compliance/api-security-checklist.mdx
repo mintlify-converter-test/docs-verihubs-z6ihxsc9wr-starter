@@ -1,0 +1,69 @@
+---
+title: "API Security Checklist"
+description: "Ensuring compliance and security in your digital business with Verihubs"
+---
+# API Security Checklist: Ensuring Compliance and Security in Your Digital Business with Verihubs
+
+At [Verihubs](https://verihubs.ai)
+, we leverage cloud-based AI technology to turn businesses safer and faster within seconds, controlling end-to-end customer onboarding, managing large-scale data, and preventing fraud. As a SaaS-based company, we provide a complete solution for compliance and security for digital businesses, making customer experiences smoother, operations more efficient, and maintaining data security because we are technology-based.
+
+In this blog post, we present an API Security Checklist to help our partners and clients establish and maintain secure API environments, vital for the seamless operation and integration of different software systems. This checklist is a part of our commitment to ensure that businesses can operate securely, efficiently, and fraud-free.
+
+_Remember: It's the client's responsibility to implement, create, and design secure APIs. If these measures are not correctly undertaken, Verihubs cannot be held accountable for nullifying any transactions that may be fraudulent as a result._
+
+* * *
+
+## Authentication
+
+*   Don't use Basic Auth. Use standard authentication instead (e.g., JWT).
+*   Use Max Retry and jail features in Login.
+*   Enforce Transport Layer Security (TLS).
+
+## Authorization
+
+*   Implement an authorization mechanism that checks whether the logged-in user has permission to perform an action.
+*   Use this authorization mechanism in all functions that access sensitive data.
+*   Use randomly generated GUIDs (as they are hard to guess) as object identifiers for user requests.
+*   Ensure your authorization frameworks grant access explicitly to individual resources.
+*   Ensure the default permission for all users for all resources is to deny access.
+*   Do not directly assign user input to objects in your API functions or create or update objects by directly assigning user input.
+*   Explicitly define the object properties that the user is able to update in your API code.
+*   Enforce validation and data schemas so that only approved object properties will be used by your API functions.
+
+### Input and Output
+
+*   Always Validate User Input.
+*   Do not **trust** any user input. Always do validation on backend.
+
+## Access Control
+
+*   Implement API Rate Limiting
+    
+    Providing unlimited access to your API for every consumer is a recipe for disaster, opening it up to myriad ways for hackers to exploit it - especially as you grow your active user base.
+    
+    API rate limiting refers to a set of measures aimed at managing API traffic by enforcing certain limitations and restrictions related to:
+    
+    *   The number of requests a given user or IP address can send over a certain period of time
+    *   The number of requests your API can process at any given time
+    *   Any additional fees related to sending new API calls once the limit has been exceeded
+    *   The way an API reacts once any of the rate limits have been reached - from redirecting the user to an error page to triggering an alarm to the development and security teams
+    
+    **Always** protect all login, password recovery, and registration paths using rate limiting, brute force protection, and by adding lockout measures for abusive traffic sources;
+    
+    To get started, consider the following five rate-limiting strategies you can adopt to manage your resources without interfering with user experience effectively :
+    
+    *   Leaky Bucket: an algorithm that approaches rate limiting with queues -first in, first out
+    *   Token Bucket: an algorithm that approaches rate limiting with fixed capacity buckets
+    *   Fixed Window: time-based rate limiting algorithm that processes requests based on time limits
+    *   Sliding Log: time-stamped logs for each request
+    *   Captcha
+*   Only allow traffic to private API endpoints from allow-listed IP addresses or from Accounts with higher privilege levels.
+    
+
+## Logging and Monitoring
+
+*   **Log** all authentication and authorization failures.
+*   Log request details that can be used to quickly identify the source of an attack using API security tooling.
+*   Properly format logs so that they can be filtered and reported with a log management platform.
+*   Treat logs as sensitive data, as they contain information on both your users and API vulnerabilities.
+*   Implement continuous monitoring of your infrastructure and tailor your monitoring reports to include the information that is **most important** to your API security.
