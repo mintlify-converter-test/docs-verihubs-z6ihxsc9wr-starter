@@ -1,0 +1,39 @@
+---
+title: "Verihubs Rate Limiting"
+description: "Overview of request rate limits for various Verihubs services."
+---
+There are limits on how many requests are allowed in a particular time. Verihubs apply rate limit of maximum 50 RPS for each CLIENT. This rate limit is also divided into several categories according to the table below.
+
+| Services | Products | Rate Limit (RPS) |
+| --- | --- | --- |
+| SMS-Service | SMS OTP  SMS Non OTP | 50  |
+| Whatsapp-Service | Whatsapp Message / Bulk  Whatsapp OTP | 30  |
+| Face-Service | Face Recognition (Enroll, Verify, Compare, Search)  Face Anti Spoofing (Passive Liveness) | 2   |
+| KTP-Service | OCR (Extract)  OCR (Extract Async) | 1   |
+| Data-Verification-Service | Electronic Certificate Issuance  NPWP Verification | 2   |
+
+**Example of Rate Limit Exceeded**
+
+1.  CLIENT (PT A) uses two services of SMS-Service (uses SMS Non OTP) and Whatsapp-Service (uses Whatsapp Message / Bulk) with a total RPS of 60 RPS. (This is not allowed as maximum limit of 50 RPS is applied).
+2.  CLIENT (PT A) uses two services of Face-service (Passive Liveness) and Whatsapp-Service with a total RPS of 50 RPS. (This is not allowed even if does not exceed 50 RPS as Face-service has maximum 2 RPS and Whatsapp-Service has maximum 30 RPS, in total can only be 32 RPS at most)
+
+If you need to use Verihubs services exceeding the rate limit stated above, then you have to contact our Customer Success and apply for the request at least two (2) working days in advance.
+
+* * *
+
+Terdapat batasan terhadap seberapa banyak sebuah permintaan dapat ditangani dalam satu satuan waktu. Verihubs mengaplikasikan _rate limit_ dengan maksimum 50 RPS untuk tiap KLIEN. _Rate limit_ ini dibagi dalam beberapa kategori sesuai tabel berikut.
+
+| Layanan | Produk | Rate Limit (RPS) |
+| --- | --- | --- |
+| SMS-Service | SMS OTP  SMS Non OTP | 50  |
+| Whatsapp-Service | Whatsapp Message / Bulk  Whatsapp OTP | 30  |
+| Face-Service | Face Recognition (Enroll, Verify, Compare, Search)  Face Anti Spoofing (Passive Liveness) | 2   |
+| KTP-Service | OCR (Extract)  OCR (Extract Async) | 1   |
+| Data-Verification-Service | Electronic Certificate Issuance  NPWP Verification | 2   |
+
+**Contoh Melewati Batas Rate Limit**
+
+1.  KLIEN (PT A) menggunakan dua layanan _SMS-service_ (SMS Non OTP) dan _Whatsapp-service_ (Whatsapp Message / Bulk) dengan total 60 RPS. (Hal ini tidak dapat diakomodir karena maksimum _rate limit_ yang diterapkan adalah 50 RPS).
+2.  KLIEN (PT A) menggunakan dua layanan _Face-service_ (Passive Liveness) dan _Whatsapp-service_ dengan total 50 RPS. (Hal ini tidak dapat diakomodir meskipun tidak melewati 50 RPS, karena _Face-service_ memiliki maksimum 2 RPS dan _Whatsapp-service_ memiliki maksimum 30 RPS. Dengan demikian, total maksimum yang memungkinkan adalah 32 RPS).
+
+Apabila ada keperluan penggunaan layanan Verihubs yang melebihi batasan _rate limit_ sebagaimana dicantumkan di atas, maka dapat menghubungi Tim Customer Success Verihubs dan mengajukan permohonan setidaknya dua (2) hari kerja sebelumnya.
