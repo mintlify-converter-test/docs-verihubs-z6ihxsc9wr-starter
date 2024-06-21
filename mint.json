@@ -1,91 +1,75 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "docs-verihubs",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/inverted.png",
+    "light": "/logo/regular.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#20255e",
+    "light": "#1a1e4b",
+    "dark": "#20255e",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#20255e",
+      "to": "#1a1e4b"
     }
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Jadwalkan Demo Gratis",
+      "url": "https://verihubs.com/jadwalkan-demo-gratis"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Lihat Produk",
+    "url": "https://verihubs.com#product-list"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
+  "tabs": [],
+  "anchors": [],
+  "modeToggle": {
+    "default": "dark"
+  },
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Authentication",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "authentication/sign-up",
+        "authentication/sign-in",
+        "authentication/multiple-company-access"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Regulations & Compliance",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "regulations-&-compliance/rate-limit",
+        "regulations-&-compliance/service-level-agreement",
+        "regulations-&-compliance/contact-us",
+        "regulations-&-compliance/api-security-checklist"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "WhatsApp",
       "pages": [
-        "api-reference/introduction"
+        "whatsapp/whatsapp-get-started",
+        "whatsapp/whatsapp-template",
+        "whatsapp/whatsapp-otp",
+        "whatsapp/whatsapp-notifications"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "SMS",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "sms/sms-otp",
+        "sms/sms-announcement",
+        "sms/sms-segment-count-explanation",
+        "sms/sms-international-supported-countries",
+        "sms/supported-local-operator-prefix"
       ]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "instagram": "https://www.instagram.com/verihubs/",
+    "linkedin": "https://www.linkedin.com/company/verihubs/"
   }
 }
