@@ -1,0 +1,26 @@
+---
+title: "SMS Segment Count"
+description: "Overview of GSM-7 and UTF-16 encoding and cost calculation for SMS services"
+---
+Segment Count is the number of SMS segmentation which is calculated by the GSM-7 and UTF-16 encoding system based on the SMS content sent.  
+The segment count becomes a reference for calculating the cost of using SMS services.
+
+**GSM-7**
+
+GSM-7 is a character encoding standard which packs the most commonly used letters and symbols in many languages into 7 bits each for usage on GSM networks. As SMS messages are transmitted 140 8-bit octets at a time, GSM-7 encoded SMS messages can carry up to 160 characters.
+
+Each character in the basic character set is represented in an SMS message by a septet (7-bits). For characters in the basic character set extension, the ESC (0x1B) character selects the extension set. you can be found the basic character [here](https://melroselabs.com/docs/reference/sms/gsm-alphabet/)
+
+**UTF-16**
+
+UTF-16 is the new encoding schemes of UCS-2 which is much newer and more powerful. UTF-16 is a variable width encoding scheme that uses a minimum of 2 bytes and a maximum of 4 bytes for each character. This specification allows UTF-16 to represent any character in Unicode while using minimal space for the most commonly used characters. This specification supports UTF-16 capable applications to properly check UCS-2 codes.
+
+UTF-16 ability to represent scripts moving from right to left rather than from left to right. Another feature that UTF-16 has is normalization. Normalization treats words that mean the same thing but are represented differently as identical. For example, the words “cannot” and “can’t” are identical since the latter is just a contraction of the former.
+
+Unicode Characters: 02500 to 025FF [here](https://www.w3.org/TR/xml-entity-names/025.html)
+
+You can check the amount of SMS you will be sending based on your character count:
+
+![](https://files.readme.io/54d3865-image.png)
+
+Get your segment count simulation [here](https://verihubs.com/tools/segment-count-simulator/)
